@@ -1,0 +1,44 @@
+/*
+ * vivienda.h
+ *
+ *  Created on: 21 may 2022
+ *      Author: Usuario
+ */
+
+#ifndef VIVIENDA_H_
+#define VIVIENDA_H_
+
+#define LENNAME 25
+
+typedef struct {
+
+	int idVivienda;//OK
+    char calle[LENNAME];
+    int cantidadPersonas;
+    int cantidadHabitaciones;
+    int typeVivienda;
+    int legajoCensista;
+    int isEmpty;
+
+}eVivienda;
+
+#endif /* VIVIENDA_H_ */
+int initVivienda (eVivienda* array, int tamanio);
+int buscarEmptyLibre(eVivienda* espacio, int tamanio, int* espacioLibre);
+int addVivienda (eVivienda* array,int tamanio, int indice, int* id);
+int printViviendas (eVivienda array[], int tamanio);
+void viviendaSoloPrint (eVivienda array);
+int findViviendaById (eVivienda array[], int tamanio,int id,int *indice);
+void vivienda_modificarMenu(eVivienda* bufferVivienda);
+int removeVivienda (eVivienda* bufferEmpleado);
+/**
+ *\brief Ordenar el array de clientes por nombre y OTRO PARAMETRO
+ *\brief
+ *\param array Array de empleado
+ *\param tamanio limite del array de empleado
+ *\param param retorna un 0 (EXITO) y -1 (ERROR)
+
+ */
+int ListarViviendasCalleCant (eVivienda* array, int tamanio);
+
+

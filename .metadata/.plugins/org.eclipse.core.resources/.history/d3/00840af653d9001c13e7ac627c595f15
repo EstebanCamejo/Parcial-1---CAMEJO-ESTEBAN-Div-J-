@@ -1,0 +1,71 @@
+/*
+ * censista.c
+ *
+ *  Created on: 21 may 2022
+ *      Author: Usuario
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "censista.h"
+
+
+int printCensistas (eCensista* array, int tamanio)
+{
+	int retorno = -1;
+	if (array != NULL && tamanio >0)
+	{
+
+		printf("\n 			**LISTADO DE CENSISTAS** \n");
+		printf("-------------------------------------------------------\n");
+		printf("LEGAJO	 	NOMBRE		 EDAD		 TELEFONO		 ");
+		for (int i = 0;i<tamanio;i++)
+		{
+			if(array[i].isEmpty == 0)
+			{
+
+				viviendaSoloPrint (array[i]);
+			}
+		}
+
+		printf("--------------------------------------------------------------------------------------\n");
+		retorno = 0;
+	}
+	return retorno;
+}
+
+void censistaSoloPrint (eCensista array) // imprimir empleado 73
+{
+	//printPassenger(ePassenger array[], int tamanio, int* pResultado)
+
+	//etypePassenger type [5] = {{1,"Adulto"},{2,"Menor"},{3,"Tercer edad"},{4,"Embarazada"},{5,"discapacitado"}};
+	//eStatusFly status [3] = {{1,"activo"},{2,"demorado"},{3,"cancelado"}};
+	eVivienda type [4] = {{1,"Casa"},{2,"Departamento"},{3,"Casilla"},{4,"Rancho"}};
+//	eCensista aCencistas [3] = { {100,'Ana', 34,1203-2345}, {101,'Juan',24,4301-54678}, {102,'Sol',47,5902-37487} } ;
+
+	int i ;
+	int j ;
+
+		for ( i = 0; i<4; i++){
+
+			if (array.typeVivienda == type [i].typeVivienda){
+
+				break;
+			}
+/*		}
+
+		for ( j = 0; j < 3; j++){
+
+			if (array.statusFly == status [j].statusFly){
+
+				break;
+			}
+		}
+*/
+		printf("\n%c	 	%d		 %d     		  %s	  	 	%d  	 \n",
+				array.calle, array.cantidadPersonas, array.cantidadHabitaciones, array.typeVivienda, array.idVivienda);
+
+}
+
+

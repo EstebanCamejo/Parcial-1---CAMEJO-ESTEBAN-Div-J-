@@ -1,0 +1,20 @@
+/*
+ * censista.h
+ *
+ *  Created on: 21 may 2022
+ *      Author: Usuario
+ */
+
+#ifndef CENSISTA_H_
+#define CENSISTA_H_
+
+typedef struct {
+
+	int legajoCensista;
+	char nombre [10];
+	int edad;
+	int telefono;
+
+}eCensista;
+
+#endif /* CENSISTA_H_ */

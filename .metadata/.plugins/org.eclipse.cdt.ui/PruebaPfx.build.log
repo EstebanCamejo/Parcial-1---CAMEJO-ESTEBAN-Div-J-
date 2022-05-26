@@ -1,0 +1,52 @@
+13:10:47 **** Incremental Build of configuration Debug for project PruebaPfx ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PruebaPfx.o" "..\\src\\PruebaPfx.c" 
+..\src\PruebaPfx.c: In function 'main':
+..\src\PruebaPfx.c:30:6: warning: 'main' is normally a non-static function [-Wmain]
+   30 |  int main(void)
+      |      ^~~~
+..\src\PruebaPfx.c: In function 'main':
+..\src\PruebaPfx.c:34:13: error: redeclaration of 'auxiliar' with no linkage
+   34 |      miTipo auxiliar;
+      |             ^~~~~~~~
+..\src\PruebaPfx.c:33:10: note: previous declaration of 'auxiliar' was here
+   33 |      int auxiliar;
+      |          ^~~~~~~~
+..\src\PruebaPfx.c:35:24: warning: unused variable 'pfunc' [-Wunused-variable]
+   35 |      tFuncionOperacion pfunc;
+      |                        ^~~~~
+..\src\PruebaPfx.c: In function 'main':
+..\src\PruebaPfx.c:59:7: error: static declaration of 'restar' follows non-static declaration
+   59 |  void restar(int parametroA, int parametroB, int* pResultado)
+      |       ^~~~~~
+..\src\PruebaPfx.c:22:7: note: previous declaration of 'restar' was here
+   22 |  void restar(int parametroA, int parametroB, int* pResultado);
+      |       ^~~~~~
+..\src\PruebaPfx.c:67:7: error: static declaration of 'sumar' follows non-static declaration
+   67 |  void sumar(int parametroA, int parametroB, int* pResultado)
+      |       ^~~~~
+..\src\PruebaPfx.c:23:7: note: previous declaration of 'sumar' was here
+   23 |  void sumar(int parametroA, int parametroB, int* pResultado);
+      |       ^~~~~
+..\src\PruebaPfx.c:75:6: error: static declaration of 'calcular' follows non-static declaration
+   75 |  int calcular( int parametroA, int parametroB, void(*pFuncion)(int,int,int*) )
+      |      ^~~~~~~~
+..\src\PruebaPfx.c:25:6: note: previous declaration of 'calcular' was here
+   25 |  int calcular( int , miTipo , tFuncionOperacion);
+      |      ^~~~~~~~
+At top level:
+..\src\PruebaPfx.c:75:6: warning: 'calcular' defined but not used [-Wunused-function]
+   75 |  int calcular( int parametroA, int parametroB, void(*pFuncion)(int,int,int*) )
+      |      ^~~~~~~~
+..\src\PruebaPfx.c:67:7: warning: 'sumar' defined but not used [-Wunused-function]
+   67 |  void sumar(int parametroA, int parametroB, int* pResultado)
+      |       ^~~~~
+..\src\PruebaPfx.c:59:7: warning: 'restar' defined but not used [-Wunused-function]
+   59 |  void restar(int parametroA, int parametroB, int* pResultado)
+      |       ^~~~~~
+..\src\PruebaPfx.c:30:6: warning: 'main' defined but not used [-Wunused-function]
+   30 |  int main(void)
+      |      ^~~~
+
+13:10:47 Build Failed. 4 errors, 6 warnings. (took 169ms)
+
