@@ -1,6 +1,1 @@
-15:22:03 **** Incremental Build of configuration Debug for project Parcial_[nroUno] ****
-Info: Internal Builder is used for build
-gcc -o Parcial_[nroUno].exe "src\\Parcial_[nroUno].o" "src\\UTN.o" "src\\censista.o" "src\\vivienda.o" 
-
-15:22:03 Build Finished. 0 errors, 0 warnings. (took 213ms)
-
+Info: Nothing to build for Parcial_[nroUno]

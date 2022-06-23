@@ -33,7 +33,7 @@ int main(void) {
 	int cencista100 = 0;
 	int cencista101 = 0;
 	int cencista102 = 0;
-//	int MayoCensista;
+	int MayoCensista;
 
 	eVivienda aViviendas [TAM];
 	eCensista aCencistas [LEN] = {{100,"Ana",34,"1203-2345"},{101,"Juan",24,"4301-54678"}, {102,"Sol",47,"5902-37487"}};
@@ -88,7 +88,7 @@ int main(void) {
 						{
 							printf("CALLE	 	  C.PERSONAS		 C.HABITACIONES		 TIPO VIVIENDA		    ID VIVIENDA	");
 							imprimirVivienda(&aViviendas[auxIndice]);
-							vivienda_modificarMenu(&(*(aViviendas +auxIndice)));
+							vivienda_modificarMenu(&aViviendas[auxIndice]);
 						}
 					break;
 
@@ -162,28 +162,24 @@ int main(void) {
 
 							if ( aCencistas[0].legajoCensista ==  aViviendas[j].legajoCensista){
 								 cencista100++ ;
-
 							}
 							if ( aCencistas[1].legajoCensista ==  aViviendas[j].legajoCensista){
 								 cencista101++;
-
 							}
 							if ( aCencistas[2].legajoCensista ==  aViviendas[j].legajoCensista){
 								cencista102++;
-
 							}
 						}
 						if(cencista100>cencista101 && cencista100>cencista102 ){
-						//	MayoCensista = cencista100;
+							MayoCensista = cencista100;
 							printf("\n 					**EL CENSISTA CON MAS ALTAS ES** \n");
 							printf("-------------------------------------------------------------------\n");
 							printf("LEGAJO	 	NOMBRE		 EDAD		   TELEFONO		 \n");
 							printf("-------------------------------------------------------------------\n");
 							imprimirUnCensista (&aCencistas[0]);
-
 						}
 						else if(cencista101>cencista100 && cencista101>= cencista102){
-						//	MayoCensista = cencista101;
+							MayoCensista = cencista101;
 							printf("\n 					**EL CENSISTA CON MAS ALTAS ES** \n");
 							printf("-------------------------------------------------------------------\n");
 							printf("LEGAJO	 	NOMBRE		 EDAD		   TELEFONO		 \n");
@@ -192,8 +188,9 @@ int main(void) {
 
 						}
 						else {
-							//MayoCensista = cencista102;
+							MayoCensista = cencista102;
 							printf("\n 					**EL CENSISTA CON MAS ALTAS ES** \n");
+
 							printf("-------------------------------------------------------------------\n");
 							printf("LEGAJO	 	NOMBRE		 EDAD		   TELEFONO		 \n");
 							printf("-------------------------------------------------------------------\n");

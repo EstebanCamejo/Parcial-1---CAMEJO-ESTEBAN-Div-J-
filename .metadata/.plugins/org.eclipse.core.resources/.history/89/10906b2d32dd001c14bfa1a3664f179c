@@ -88,7 +88,7 @@ int main(void) {
 						{
 							printf("CALLE	 	  C.PERSONAS		 C.HABITACIONES		 TIPO VIVIENDA		    ID VIVIENDA	");
 							imprimirVivienda(&aViviendas[auxIndice]);
-							vivienda_modificarMenu(&(*(aViviendas +auxIndice)));
+							vivienda_modificarMenu(&(*(aViviendas + auxIndice));
 						}
 					break;
 

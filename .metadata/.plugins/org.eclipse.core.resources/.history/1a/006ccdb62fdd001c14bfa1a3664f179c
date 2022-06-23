@@ -120,7 +120,7 @@ void imprimirViviendas (eVivienda* array, int tamanio,int* pResultado)
 		{
 			if( (*(array + i)).isEmpty == 0)
 			{
-				imprimirVivienda((*(array+i));
+				imprimirVivienda(&array[i]);
 			}
 		}
 
